@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include <lapacke.h>
+#include <lapacke.h>
 #include <math.h>
-#include <mkl.h>
+//#include <mkl.h>
 
 int main()
 {
@@ -27,10 +27,10 @@ int main()
     
     k = 3 * n;
     
-    info = fopen_s(&in,"E:\s.dat", "r");
+    in = fopen("xxs.dat", "r");
     for(i = 0; i<k; i++)
     {
-        fscanf_s(in,"%15lf", &xs[i]);
+        fscanf(in,"%15lf", &xs[i]);
         //xs[i] = i+1;
     }
 	//xs[6] = 0;
@@ -38,7 +38,7 @@ int main()
     
     for(i = 0; i<k; i++)
     {
-        fscanf_s(in,"%15lf", &x[i]);
+        fscanf(in,"%15lf", &x[i]);
         //x[i] = i+1;
 		y[i] = x[i];
     }
