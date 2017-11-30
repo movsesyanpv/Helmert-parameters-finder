@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <lapacke.h>
 #include <math.h>
+#include "proj_api.h"
 //#include <mkl.h>
 
 int main()
